@@ -1,0 +1,25 @@
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ProductsComponent } from '../products/products.component';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+
+  constructor(public dialog: MatDialog) { }
+
+  ngOnInit(): void {
+  }
+
+
+  loadProducts(){
+    const dialogRef = this.dialog.open(ProductsComponent, {
+      width: '97%',
+      height :'90%',
+    });
+  }
+
+}

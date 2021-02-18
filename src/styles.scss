@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+$mediaColor : #fcefee;
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+$secendColor : #c5e3f6 ;
+$bittonHoverAndText : #fc5c9c;
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+.mat-dialog-container{
+    background-color: $mediaColor;
+}
+.mat-tab-label .mat-tab-label-content{
+  color: $bittonHoverAndText;
+}
+.mat-step-header,.mat-vertical-content,.mat-step {
+    background-color: $mediaColor;
+}

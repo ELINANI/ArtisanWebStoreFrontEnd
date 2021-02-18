@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <mat-tab-group class="parent">
+    <mat-tab label="Login">
+      <form [formGroup]="formGroup" (submit)="login()" class="formGlobale">
+        <div class="form">
+          <div class="form-group">
+            <mat-form-field class="example-full-width">
+              <mat-label class="label">Email</mat-label>
+              <input type="email" matInput placeholder="Ex. pat@example.com" formControlName ="email" name="email" [(ngModel)]= "compte.email">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width">
+              <mat-label class="label">Password</mat-label>
+              <input type="password" matInput placeholder="Ex. g545ddfd02." formControlName ="pwd" [(ngModel)] = "compte.pwd">
+            </mat-form-field>
+            <br>
+            <button mat-button color="accent" style="background-color: #c5e3f6;">Login</button>
+          </div>
+        </div>
+      </form>
+    </mat-tab>
+    <mat-tab label="Register">
+      <mat-vertical-stepper #stepper>
+        <mat-step>
+          <div class="chooser">
+            <form [formGroup]="registerStepOne" class="formRegister">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <mat-form-field class="example-full-width">
+                    <mat-label class="label">Nom</mat-label>
+                    <input type="text" matInput placeholder="Ex. El inani" formControlName="nom" name="nomPersonne"
+                      [(ngModel)]="client.nomPersonne" required>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label class="label">Prenom</mat-label>
+                    <input type="text" matInput placeholder="Ex. Soufiane" formControlName="prenom"
+                      name="presnomPersonne" [(ngModel)]="client.presnomPersonne" required>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label class="label">Cin</mat-label>
+                    <input type="text" matInput placeholder="Ex. G696157" formControlName="cin" name="cinPersonne"
+                      [(ngModel)]="client.cinPersonne" required>
+                  </mat-form-field>
+                </div>
+              </div>
+            </form>
+            <button mat-button matStepperNext color="accent" style="background-color: #c5e3f6;"
+              class="next">Next</button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <form [formGroup]="registerStepTwo" class="registerStepTwo">
+            <mat-form-field class="example-full-width">
+              <mat-label class="label">Email</mat-label>
+              <input type="text" matInput placeholder="Ex. elinani@gmail.com" name="emailPersonne" id="emailPersonne"
+                [(ngModel)]="client.emailPersonne" required formControlName="email">
+            </mat-form-field>
+            <button class="one" mat-button (click)="verify()" class="verify" color="accent"
+              style="background-color: #c5e3f6;">verify</button>
+            <button *ngIf="service.verifyEmail" class="one" mat-button matStepperNext class="verify" color="accent"
+              style="background-color: #c5e3f6;">Next</button>
+            <button class="secend" mat-button matStepperPrevious color="warn">Back</button>
+          </form>
+        </mat-step>
+        <mat-step>
+          <form [formGroup]="registerStepTree">
+            <div class="imagePrfile">
+              <img [src]="image" alt="Profile" title="Profile" class="rounded-circle">
+            </div>
+            <mat-form-field class="example-full-width">
+              <mat-label class="label">Password</mat-label>
+              <input type="text" matInput placeholder="Ex. AX544d.?" name="pwdPersonne" id="pwdPersonne"
+                [(ngModel)]="client.pwdPersonne" required formControlName="pwd">
+            </mat-form-field>
+            <input class="file" type="file" name="file" id="file" (change)="loadImage($event)">
+            <button class="one" style="margin-top: 20px;" mat-button matStepperNext class="verify" color="accent"
+              style="background-color: #c5e3f6;">Next</button>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <mat-radio-group aria-label="Select an option" [(ngModel)] = "artisanORClient">{{artisanORClient}}
+            <mat-radio-button value="Client" style="margin-right: 10px; color: #fc5c9c; font-size: 12px; font-weight: bold;">Client</mat-radio-button>
+            <mat-radio-button value="Artisan" style ="color: #fc5c9c; font-size: 10px; font-weight: bold;">Artisan</mat-radio-button>
+          </mat-radio-group>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious >Back</button>
+            <button mat-button (click)="regiser()">Register</button>
+          </div>
+        </mat-step>
+      </mat-vertical-stepper>
+    </mat-tab>
+  </mat-tab-group>
+
+
+</body>
+
+</html>

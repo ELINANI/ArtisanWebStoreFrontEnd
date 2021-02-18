@@ -1,0 +1,32 @@
+$mediaColor : #fcefee;
+$bittonHoverAndText : #fc5c9c;
+$buttonBack : #fccde2;
+$secendColor : #c5e3f6 ;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.snipper{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    color: $bittonHoverAndText;
+}
+.container{
+    .row{
+        justify-content: center;
+             align-items: center;
+         .col-xl-2,.col-lg-3,.col-md-6,.col-sm-12{
+             margin-bottom: 10px;
+            .card {
+                transform-style: preserve-3d;
+                height: 280px;
+                width: 90px;
+                border-radius: 30px;
+                padding: 0rem 5rem;
+                box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+              }
+         }
+    }
+}

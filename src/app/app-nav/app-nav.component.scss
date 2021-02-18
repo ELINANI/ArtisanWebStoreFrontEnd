@@ -1,0 +1,44 @@
+$mediaColor : #fcefee;
+$bittonHoverAndText : #fc5c9c;
+$buttonBack : #fccde2;
+$secendColor : #c5e3f6 ;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.appBar{
+    background-color: $mediaColor;
+    padding: 1%;
+    z-index: 2000000000000000 !important;
+    overflow: hidden;
+    .app{
+        margin-left: 30%;
+        .row {
+            .col:first-of-type{
+                position: relative;
+                .phone{
+                    position: absolute;
+                    color:$bittonHoverAndText; 
+                    margin-left: -8%;
+                }
+                span{
+                    letter-spacing: 2px;
+                    color: $bittonHoverAndText;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+            .col:last-of-type{
+               position: relative;
+               .login{
+                position: absolute;
+                color:$bittonHoverAndText; 
+                cursor: pointer;
+               } 
+              
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+$mediaColor : #fcefee;
+$bittonHoverAndText : #fc5c9c;
+$buttonBack : #fccde2;
+$secendColor : #c5e3f6 ;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    background-color: white;
+    .circle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 43px;
+        width: 100%;
+        height: 100%;
+        background-color: $mediaColor;
+       
+          clip-path: circle(80% at right -20%);
+         
+      }
+      header{
+        position: absolute;
+        width: 100%;
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 100px;
+        z-index: 1 !important;
+           a{
+               cursor: pointer;
+                img{
+               max-width: 150px;
+               }
+               img:hover{
+                   transition: .5s all ease-in-out;
+                   transform: rotate(360deg);
+                   overflow: hidden;
+               }
+             }
+             ul {
+                 display: flex;
+                 li {
+                    margin: 0px 17px;
+                     list-style: none;
+                    a{
+                        font-family: 'Ribeye';
+                        text-decoration: none;
+                        color: $bittonHoverAndText;
+                    }
+                    a:hover{
+                       transition: 0.2s all ease-in-out;
+                       letter-spacing: 1px;
+                       
+                   }
+                 }
+             }
+             div {
+                 position: relative;
+                 width: 200px;
+                 height: 40px;
+                  input {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      color: #fc5c9c;
+                      margin-left: 28px;
+                      background: transparent;
+                      border: none;
+                      border-bottom: 1px solid $secendColor;
+                      outline: none;
+                      font-family: 'Ribeye';
+                      border-radius: 4px;;
+                      padding: 0px 10px 0x 45px;
+                  }
+                
+                  input::placeholder{
+                   font-family: 'Ribeye';
+                      color: $bittonHoverAndText;
+                  }
+                  .navSearch{
+                      position: absolute;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      padding-right: 10px;
+                      color: $bittonHoverAndText;
+                      cursor: pointer;
+                      
+                  }
+             }
+       }
+       .info{
+           position: absolute;
+           top: 45%;
+           left: 8%;
+           h3{
+                font-family: 'Ribeye';
+                font-size: 25px;
+                font-weight: bold;
+                color: $bittonHoverAndText;
+                letter-spacing: 1px;                
+           }
+           p{
+               width: 45%;
+               line-height: 30px;
+               letter-spacing: 1px;
+               
+
+           }
+           button{
+               padding: 10px 20px;
+               border-radius: 10px;  
+               background-color: transparent;
+               border : 1px solid $bittonHoverAndText;
+               color: $bittonHoverAndText;
+               font-weight: bold;
+               font-family: 'Ribeye';
+           }
+           button:hover{
+            border : 1px solid $secendColor;
+            color: $secendColor;
+           }
+
+       }
+       
+}
