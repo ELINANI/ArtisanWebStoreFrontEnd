@@ -1,0 +1,26 @@
+<div class="cmd">
+   <div class="cmdnew">
+    <mat-card class="example-card" style ="margin-left: 10px;">
+      <img mat-card-image src="data:image/jpeg;base64,{{this.item.item.imageCommandeView}}" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          {{this.item.item.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Prix : {{this.item.item.prixArticle}} DH</button>
+        <button mat-button>Stock : {{this.item.item.qteArticle}}</button>
+      </mat-card-actions>
+    </mat-card>
+   </div>
+  <div class="validation">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Qntatié</mat-label>
+        <input matInput placeholder="Ex. 10" value="">
+      </mat-form-field>
+    <br><br>
+      <button mat-raised-button color="accent" (click) ="validation()" style="font-size: 12px;">Commandée</button>
+    </form>
+  </div>
+</div>

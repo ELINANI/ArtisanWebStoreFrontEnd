@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+.cmd{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    .cmdnew{
+        width: 200px;
+        height: 200px;
+        .example-card{
+             margin-left: 60px;
+             img{
+                 width: 100%;
+             }
+        }
+    }
+    .validation{
+      position: absolute;
+      margin-top: 50px;
+    }
+}

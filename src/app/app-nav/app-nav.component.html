@@ -6,7 +6,7 @@
                     </div>
                     <div class="col">
                         <mat-icon  *ngIf="!loginService.connection" (click) ="login()" class="login">perm_contact_calendar</mat-icon>
-                        <img *ngIf="loginService.connection" [src]="loginService.profile" class="rounded-circle" style="width: 25px; height: 20px; cursor: pointer;">
+                        <img *ngIf="loginService.connection" [src]="loginService.profile" (click) ="profile()" class="rounded-circle" style="width: 25px; height: 20px; cursor: pointer;">
                     </div>
               </div>
             </div>

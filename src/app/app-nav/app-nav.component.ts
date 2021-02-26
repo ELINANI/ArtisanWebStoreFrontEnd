@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { LocalStorageService } from 'ng2-webstorage';
 import { LoginRegisterComponent } from '../login-register/login-register.component';
 import { LoginService } from '../services/login.service';
@@ -10,7 +11,7 @@ import { LoginService } from '../services/login.service';
 })
 export class AppNavComponent implements OnInit {
 
-  constructor(public loginService:LoginService,private dialog: MatDialog ) { }
+  constructor(private route:Router,public loginService:LoginService,private dialog: MatDialog ) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +21,11 @@ export class AppNavComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
+
+  profile(){
+     this.route.navigate(['dashboard']);
+  }
+  
 
 }
 

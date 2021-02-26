@@ -17,7 +17,8 @@ import { LoginRegisterComponent } from './login-register/login-register.componen
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { ErrorMessageComponent } from './error-message/error-message.component';
 import { RightMessageComponent } from './right-message/right-message.component';
-import { ProductsComponent } from './products/products.component'
+import { ProductsComponent } from './products/products.component';
+import { CommandeComponent } from './commande/commande.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProductsComponent } from './products/products.component'
     VerifyEmailComponent,
     ErrorMessageComponent,
     RightMessageComponent,
-    ProductsComponent
+    ProductsComponent,
+    CommandeComponent
   ],
   imports: [
     BrowserModule,

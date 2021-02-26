@@ -97,6 +97,7 @@ export class LoginRegisterComponent implements OnInit {
    connect(token:any){
        this.loginService.connect(token).subscribe(res => {
           this.localStorageService.store('userConnectData' , res);
+          localStorage.setItem('userConnectData',res as string);
            console.log(this.localStorageService.retrieve('userConnectData'));
            this.loginService.connection = true;
             let obj  = JSON.parse(this.localStorageService.retrieve('userConnectData'));
@@ -160,4 +161,5 @@ export class LoginRegisterComponent implements OnInit {
       this.image = fileReader.result;
     }
   }
+  
 }
